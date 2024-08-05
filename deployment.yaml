@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kodecamp-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kodecamp-app
+  template:
+    metadata:
+      labels:
+        app: kodecamp-app
+    spec:
+      containers:
+      - name: kodecamp-app
+        image: mabirhire1/kodecamp-app:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: kodecamp-app-config
+              key: MESSAGE
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: kodecamp-app-secret
+              key: PASSWORD
