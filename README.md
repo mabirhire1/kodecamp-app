@@ -21,7 +21,7 @@ Strengthen your knowledge and skills with Docker and Kubernetes by creating a si
    - Write a Dockerfile
    - Tag and push Docker image to Docker Hub
 
-![Docker Hub Url](https://hub.docker.com/r/mabirhire1/kodecamp-app)
+Docker Hub URL: https://hub.docker.com/r/mabirhire1/kodecamp-app
 
 
 ### Deploy to Kubernetes:
